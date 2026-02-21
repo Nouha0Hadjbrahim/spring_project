@@ -30,6 +30,6 @@ public class Sponsor {
     LocalDate dateCreation;
     LocalDate dateDerniereModification;
 
-    @OneToMany(cascade = CascadeType.PERSIST, mappedBy="Sponsor")
+    @OneToMany(cascade = CascadeType.PERSIST, mappedBy="sponsor")
     private List<Contrat> contrats;
 }
