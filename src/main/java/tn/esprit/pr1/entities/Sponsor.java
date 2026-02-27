@@ -1,9 +1,6 @@
 package tn.esprit.pr1.entities;
 
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
@@ -17,6 +14,7 @@ import java.util.List;
 public class Sponsor {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idSponsor;
 
     private String nom;
