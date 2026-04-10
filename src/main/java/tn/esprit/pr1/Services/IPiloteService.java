@@ -6,4 +6,6 @@ public interface IPiloteService {
 
     String addPilote(Pilote p);
 
+    void updatePilotRankings();
+
 }
