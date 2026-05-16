@@ -4,6 +4,9 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import tn.esprit.pr1.entities.Equipe;
 
+import java.util.Optional;
+
 @Repository
 public interface EquipeRepository extends JpaRepository<Equipe, Long> {
+    Optional<Equipe> findByLibelle(String libelle);
 }

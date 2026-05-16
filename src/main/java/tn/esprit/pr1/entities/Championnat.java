@@ -25,7 +25,7 @@ public class Championnat {
     private DetailChampionnat detail;
 
     // *:*: bidirectional with Course
-    @ManyToMany
+    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinTable(
             name = "championnat_course",
             joinColumns = @JoinColumn(name = "championnat_id"),
